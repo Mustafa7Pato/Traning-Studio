@@ -1,0 +1,404 @@
+:root {
+  --mainColor: #ed563b;
+  --secColor: #212529;
+  --upper: uppercase;
+  --mb: 20px;
+  --pColor: #777;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+::selection {
+  background-color: var(--mainColor);
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  text-transform: var(--upper);
+  color: white;
+}
+header::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(35, 45, 57, 0.8);
+  z-index: 2;
+}
+nav {
+  text-transform: uppercase;
+  background-color: rgba(238, 238, 238, 0.11);
+  position: absolute !important;
+  z-index: 9999;
+  top: 0;
+  min-width: 100%;
+}
+header a {
+  color: white !important;
+}
+.links {
+  flex-basis: 80%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.8em;
+}
+span {
+  color: var(--mainColor);
+}
+.b-nav {
+  background-color: var(--mainColor);
+  color: white;
+  border-radius: 1px;
+  padding: 12px !important;
+}
+.b-nav:focus {
+  box-shadow: none;
+}
+.b-nav:hover {
+  background-color: #e68f80;
+  color: white;
+}
+.nav-link {
+  font-size: 12px;
+  font-weight: bold;
+}
+.nav-link:hover {
+  color: var(--mainColor) !important;
+}
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.center-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+.center-txt h1 {
+  line-height: 1.8;
+  font-size: 4.5em;
+}
+@media screen and (max-width: 740px) {
+  nav {
+    background-color: #212529;
+  }
+  .navbar-brand {
+    font-size: 1.3em;
+  }
+  .center-txt h1 {
+    font-size: 3em;
+  }
+  .center-txt {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 991px) {
+  nav {
+    background-color: #212529;
+    position: fixed !important;
+  }
+}
+/*about*/
+.about {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 7em auto;
+}
+.about .head {
+  text-align: center;
+  max-width: 50%;
+  margin: 30px auto;
+}
+.head h1 {
+  text-transform: var(--upper);
+}
+.head h1,
+.head p,
+.head img {
+  margin-bottom: var(--mb) !important;
+}
+.about p {
+  font-size: 14px;
+  color: var(--pColor);
+  margin-bottom: 5px;
+  line-height: 1.8;
+}
+.about a {
+  color: var(--mainColor);
+  font-size: 12px;
+}
+/*aside*/
+aside {
+  background: url(../images/cta-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 65vh;
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 7em auto;
+}
+aside p {
+  max-width: 70%;
+  line-height: 1.8;
+  margin: var(--mb) auto;
+}
+/*start classes*/
+.classes .head {
+  text-align: center;
+  max-width: 50%;
+  margin: 30px auto;
+}
+.class-right img {
+  border-radius: 5px;
+}
+.carousel-indicators {
+  bottom: 40% !important;
+}
+.carousel-indicators [type="button"] {
+  opacity: 0 !important;
+  cursor: default;
+}
+.carousel-inner h1 {
+  font-size: 1.5em;
+}
+.carousel-inner p {
+  font-size: 14px;
+  color: #555;
+}
+.carousel-inner .btn {
+  font-size: 14px;
+  padding: 10px 20px !important;
+  border-radius: 3px;
+}
+.descrip {
+  margin: 2em auto;
+}
+.taps {
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  padding: 1.5em 1em !important;
+}
+.taps:hover {
+  cursor: pointer;
+}
+.txa {
+  width: 80%;
+  text-align: center;
+}
+.taps .h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--secColor);
+}
+.taps a:hover {
+  color: var(--mainColor);
+}
+.s-btn {
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  padding: 1.3em 1em !important;
+}
+/*end classes*/
+/*start scaduale*/
+.schadule {
+  background: url(../images/schedule-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.schadule p {
+  color: white;
+}
+.schadule .table {
+  color: white;
+  margin-bottom: 7em;
+}
+.schadule .head {
+  width: 100%;
+}
+td {
+  border: 1px solid white;
+  padding: 4em;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+}
+.slash {
+  color: white;
+}
+.t-link {
+  margin: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+.t-link a {
+  color: white;
+  font-size: 1em;
+}
+.t-link a:hover {
+  color: var(--mainColor);
+}
+@media screen and (min-width: 450px) and (max-width: 768px) {
+  .schadule td {
+    padding: 2em !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .schadule td {
+    padding: 1em;
+  }
+  .schadule .container {
+    justify-content: inherit;
+  }
+  .about .head,
+  .classes .head {
+    min-width: 80%;
+  }
+}
+/*end scaduale*/
+/*start card-sec*/
+.cards {
+  min-height: 100vh;
+}
+.card {
+  border: none;
+  box-shadow: 0px 0px 10px #00000030;
+  padding: 2em;
+}
+.card-body span {
+  font-size: 12px;
+  font-weight: bold;
+}
+.card-body h5 {
+  font-weight: bold;
+  margin: 8px auto;
+}
+.card a {
+  color: var(--secColor);
+  font-size: 14px;
+  margin-top: 5px;
+}
+.card a:hover {
+  color: var(--mainColor);
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .card {
+    padding: 1em;
+  }
+}
+/*end card-sec*/
+/*start contact*/
+.contact {
+  overflow: hidden;
+  width: 101%;
+  min-height: 80vh;
+}
+.map {
+  padding: 0;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.form {
+  background: url(../images/contact-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form form {
+  width: 75%;
+  height: 80%;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2em;
+}
+.form input {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #555;
+  font-size: 14px;
+  color: #666;
+}
+.form [type="submit"] {
+  width: 10em;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  border: none;
+}
+textarea {
+  height: 150px;
+  padding: 1em;
+}
+.form input:focus,
+textarea:focus {
+  outline: none;
+}
+@media screen and (max-width: 768px) {
+  .form label {
+    flex-direction: column;
+  }
+  .form form {
+    height: fit-content;
+    padding: 1em;
+  }
+}
+/*end contact*/
+/*start footer*/
+footer {
+  margin: 3em auto;
+  text-align: center;
+}
+footer h1 {
+  font-size: 12px;
+  color: #444;
+}
+footer i {
+  color: var(--mainColor);
+  cursor: pointer;
+}
+/*end footer*/
